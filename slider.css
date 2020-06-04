@@ -1,6 +1,14 @@
+@font-face {
+  font-family: 'SofiaR';
+       url('SofiaProRegular.woff') format('woff')
+}
+
+
+
 body {
   padding-left: 10%;
   padding-right:10%;
+  font-family: 'SofiaR', Fallback, sans-serif; font-size:120%;
 }
 
 .progress-bg {
@@ -37,6 +45,9 @@ body {
 	font-weight: bold;
 	
 }
+
+
+
 
 
 
