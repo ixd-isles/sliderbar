@@ -13,12 +13,8 @@
 <body>	
 	
 <div class="labeltext"><h3 id='label'></h3></div>	
-	<div id='bar' class="progress-bg">
-    	<div id='raised-bar' class="progress-bar">
-        	<h3 class="raised"></h3>
-        </div>
-        	
-        	<h3 class="goal"></h3>
+<div id="mainbar" class="progress-bg">
+	<div id = "raised-bar"></div>
     </div>
 
 <script type="text/javascript">
@@ -27,14 +23,16 @@ function currencyFormat(num) {
   return '$' + num.toFixed(2).replace(/(\d)(?=(\d{3})+(?!\d))/g, '$1,')
 }
 
+function setProgress(n) {
+console.log(n);
+document.getElementById("raised-bar").style.width = n + "%";
+}
+
 var goal = 10000;
 var raised = 1540;
+var proportion = raised / goal;
 
-var proportion = (raised/goal);
-console.log(proportion);
-
-document.getElementById("bar").width = "100%";
-document.getElementById("raised-bar").width = proportion;
+setProgress(proportion*100);
 
 var goaldisp = currencyFormat(goal);
 var raiseddisp = currencyFormat(raised);
