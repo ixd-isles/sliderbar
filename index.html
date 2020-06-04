@@ -30,6 +30,7 @@ document.getElementById("raised-bar").style.width = n + "%";
 
 var goal = 10000;
 var raised = 2260;
+var donors = 39;
 var proportion = raised / goal;
 
 setProgress(proportion*100);
@@ -37,7 +38,7 @@ setProgress(proportion*100);
 var goaldisp = currencyFormat(goal);
 var raiseddisp = currencyFormat(raised);
 
-document.getElementById("label").innerHTML = raiseddisp + " of " + goaldisp + " raised!";
+document.getElementById("label").innerHTML = raiseddisp + " of " + goaldisp + " raised by " + donors + " people!";
 
 
 </script>
