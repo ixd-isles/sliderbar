@@ -12,9 +12,16 @@
 </head>
 <body>	
 	
-<div class="labeltext" id='label'></div>	
+	
 <div id="mainbar" class="progress-bg">
-	<div id = "raised-bar"></div>
+	<div id = "raisedbar">
+	<div class="label" id='labelnum'></div>	<div class="label" id='labeltext'>Total raised <br></div> 	
+
+	<div id = "raisedbar1" class = "raisedbar"><div id="raisedbar1num"></div></div>
+    <div id = "raisedbar2" class = "raisedbar"><div id="raisedbar2num"></div></div>
+		</div>
+	<div id="goalnum"></div><div id="goaltext">Goal</div>
+	
     </div>
 
 <script type="text/javascript">
@@ -23,22 +30,37 @@ function currencyFormat(num) {
   return '$' + num.toFixed(0).replace(/(\d)(?=(\d{3})+(?!\d))/g, '$1,')
 }
 
-function setProgress(n) {
-console.log(n);
-document.getElementById("raised-bar").style.width = n + "%";
+function setProgress(m,n,q) {
+console.log(m,n,q);
+document.getElementById("raisedbar").style.width = q + "%";
+document.getElementById("raisedbar1").style.width = m + "%";
+document.getElementById("raisedbar2").style.width = n + "%";
 }
 
-var goal = 15000;
-var raised = 10190;
+var goal = 16000;
+var raisedGoFund = 5186;
+var raisedIAT = 10190;
 var donors = 131;
-var proportion = raised / goal;
+var raised = raisedGoFund + raisedIAT;
+var proportion1 = raisedGoFund / goal;
+var proportion2 = raisedIAT / goal;
+var proportion3 = raised / goal;
 
-setProgress(proportion*100);
+setProgress((proportion1*100),(proportion2*100),(proportion3*100));
 
 var goaldisp = currencyFormat(goal);
-var raiseddisp = currencyFormat(raised);
+var raiseddisp1 = currencyFormat(raisedGoFund);
+var raiseddisp2 = currencyFormat(raisedIAT);
+var raisedtotal = currencyFormat(raised);
 
-document.getElementById("label").innerHTML = raiseddisp + " of " + goaldisp + " raised by " + donors + " people!";
+document.getElementById("labelnum").innerHTML += raisedtotal;
+
+document.getElementById("raisedbar1num").innerHTML = raiseddisp1;
+document.getElementById("raisedbar1").innerHTML += "Raised by community GoFundMe";
+document.getElementById("raisedbar2num").innerHTML = raiseddisp2;
+document.getElementById("raisedbar2").innerHTML += "Raised through IAT crowdfund";
+document.getElementById("goalnum").innerHTML =goaldisp;
+
 
 
 </script>
