@@ -8,43 +8,87 @@
 body {
   padding-left: 10%;
   padding-right:10%;
-  font-family: 'SofiaR', Fallback, sans-serif; font-size:150%;
+  font-family: 'SofiaR', Fallback, sans-serif;
 }
 
 .progress-bg {
+	padding:10px 0 10px 0;
 	margin: 0 auto;
-	height: 78px;
 	width:100%;
-	border-radius: 10px;
-  text-align: center;
-	-moz-box-shadow:    inset 0 0 10px #ccc;
-	-webkit-box-shadow: inset 0 0 10px #ccc;
-	box-shadow:         inset 0 0 10px #ccc;
+  text-align: right;
+  border-right: 2px solid #ccc;
+  color:#ccc;
+  font-weight:bold;
+  
 }
 
-
-
-#raised-bar {'
-	position:fixed;
-	height: 78px;
-	border-radius: 10px;
-	width:0;
-
-	background-color: #FFC300; 	
+#raisedbar1num, #raisedbar2num, #goalnum,#labelnum {
+	font-size:150%;
+	font-weight:bold;
 }
 
+#goaltext {
+	
+    padding-right:10px;
+	font-size:110%;
+	font-weight:bold;
+	text-align:right;
+}
 
+#goalnum {padding-right:10px;padding-top:10px;}
 
-
-
-
-
-.labeltext {
-	padding-left:10px;
+#raisedbar {
+	
+	color: #55ccff;
+	padding:0;
+	padding-right:0;
+	text-align:right;
+	border-right:solid 2px #55ccff;
 	padding-bottom:10px;
-	font-weight: bold;
+	height:auto;
 	
 }
+
+#labelnum {
+	padding-right:10px;
+	text-align:right;
+	
+}
+#labeltext {
+	padding-right:10px;
+	font-size:110%;
+	font-weight:bold;
+	text-align:right;
+	padding-bottom:10px;
+	
+}
+
+#raisedbar1 {
+	float:left;
+	font-weight:bold;
+	height:80px;
+	width:0;
+	color:#fff;
+		padding-left:10px;
+	text-align:left;
+	border-radius:10px 0 0 10px;
+	background-color: #ffc300; 	
+}
+
+#raisedbar2 {
+	font-weight:bold;
+    float:left;
+	height:80px;
+	width:0;
+	color:#fff;
+	text-align:left;
+	padding-left:10px;
+	background-color: #55ccff; 	
+}
+
+
+
+
 
 
 
