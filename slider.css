@@ -27,6 +27,24 @@ body {
 	font-weight:bold;
 }
 
+#raisedbar2num {
+	padding-left:10px;
+}
+
+#raisedbar {
+	width:100%;
+	background-color:#55ccff;
+		font-weight:bold;
+	height:80px;
+	width:0;
+	color:#fff;
+	text-align:left;
+	border-radius:10px;
+	border:none;
+	
+	
+}
+
 #goaltext {
 	
     padding-right:10px;
@@ -37,16 +55,17 @@ body {
 
 #goalnum {padding-right:10px;padding-top:10px;}
 
-#raisedbar {
+#mainbar {
 	
 	color: #55ccff;
 	padding:0;
 	padding-right:0;
 	text-align:right;
 	border-right:solid 2px #55ccff;
+	background-color:#fff;
 	padding-bottom:10px;
 	height:auto;
-	
+	width:100%;
 }
 
 #labelnum {
@@ -64,7 +83,7 @@ body {
 }
 
 #raisedbar1 {
-	float:left;
+    float:left;
 	font-weight:bold;
 	height:80px;
 	width:0;
@@ -73,18 +92,22 @@ body {
 	text-align:left;
 	border-radius:10px 0 0 10px;
 	background-color: #ffc300; 	
+	border:none;
 }
 
 #raisedbar2 {
 	font-weight:bold;
-    float:left;
+  float:left;
 	height:80px;
 	width:0;
 	color:#fff;
 	text-align:left;
 	padding-left:10px;
 	background-color: #55ccff; 	
+	border:none;
 }
+
+
 
 
 
